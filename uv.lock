@@ -34,10 +34,8 @@ dependencies = [
     { name = "numpy" },
     { name = "paho-mqtt" },
     { name = "pandas" },
-    { name = "pandas-stubs" },
     { name = "pyyaml" },
     { name = "scipy" },
-    { name = "types-pyyaml" },
 ]
 
 [package.optional-dependencies]
@@ -45,9 +43,11 @@ dev = [
     { name = "black" },
     { name = "build" },
     { name = "mypy" },
+    { name = "pandas-stubs" },
     { name = "pytest" },
     { name = "ruff" },
     { name = "twine" },
+    { name = "types-pyyaml" },
 ]
 
 [package.metadata]
@@ -58,13 +58,13 @@ requires-dist = [
     { name = "numpy", specifier = ">=1.24.0" },
     { name = "paho-mqtt", specifier = ">=1.6.0" },
     { name = "pandas", specifier = ">=2.0.0" },
-    { name = "pandas-stubs", specifier = ">=2.3.2.250926" },
+    { name = "pandas-stubs", marker = "extra == 'dev'", specifier = ">=2.3.2.250926" },
     { name = "pytest", marker = "extra == 'dev'", specifier = ">=8.2.0" },
     { name = "pyyaml", specifier = ">=6.0.2" },
     { name = "ruff", marker = "extra == 'dev'", specifier = ">=0.5.0" },
     { name = "scipy", specifier = ">=1.16.2" },
     { name = "twine", marker = "extra == 'dev'", specifier = ">=5.1.1" },
-    { name = "types-pyyaml", specifier = ">=6.0.12.20250915" },
+    { name = "types-pyyaml", marker = "extra == 'dev'", specifier = ">=6.0.12.20250915" },
 ]
 provides-extras = ["dev"]
 
